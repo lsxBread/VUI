@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/lsxBread/VUI/issues"
   },
-  "homepage": "https://github.com/lsxBread/VUI#readme"
+  "homepage": "https://github.com/lsxBread/VUI#readme",
+  "dependencies": {
+    "vue": "^2.5.17"
+  }
 }
