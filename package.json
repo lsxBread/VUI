@@ -4,6 +4,7 @@
   "description": "This is a UI framework made of Vue.js",
   "main": "index.js",
   "scripts": {
+    "start": "npx parcel index.html --no-cache",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
