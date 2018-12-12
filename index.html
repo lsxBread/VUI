@@ -28,10 +28,10 @@
 </head>
 <body>
 <div id="app">
-  <g-button icon="right">
+  <g-button :loading="loading" @click="loading = !loading">
     按钮
   </g-button>
-  <g-button icon="settings" icon-position="right">
+  <g-button icon="settings" icon-position="right" :loading="loading2" @click="loading2 = !loading2">
     按钮
   </g-button>
   <g-button>
