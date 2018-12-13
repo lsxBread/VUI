@@ -11,6 +11,7 @@
 <script>
   import Icon from './Icon'
   export default {
+    name: 'vui-button',
     components: {
       'g-icon': Icon
     },
@@ -31,7 +32,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @keyframes spin {
     0% {
       transform: rotate(0deg);
