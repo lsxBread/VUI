@@ -1,8 +1,8 @@
 {
-  "name": "vui",
+  "name": "bread-vui",
   "version": "0.0.1",
   "description": "This is a UI framework made of Vue.js",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "npx parcel index.html --no-cache",
     "dev-test": "parcel watch test/* --no-cache & karma start",
