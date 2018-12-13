@@ -34,16 +34,24 @@
       pc: { type: Object, validator },
       widePc: { type: Object, validator }
     },
+    methods: {
+      createClass (obj, string = '') {
+        if (!obj) {return []}
+        let array = []
+        if (obj.span) { array.push(`col-${string}${obj.span}`) }
+        if (obj.offset) { array.push(`offset-${string}${obj.offset}`) }
+        return array
+      }
+    },
     computed: {
       colClass () {
         const { span, offset, ipad, narrowPc, pc, widePc } = this
         return [
-          span && `col-${span}`, 
-          offset && `offset-${offset}`,
-          ... (ipad ? [`col-ipad-${ipad.span}`] : []),
-          ... (narrowPc ? [`col-narrow-pc-${narrowPc.span}`] : []),
-          ... (pc ? [`col-pc-${pc.span}`] : []),
-          ... (widePc ? [`col-wide-pc-${widePc.span}`] : []),
+          ...this.createClass({span, offset}),
+          ...this.createClass(ipad, 'ipad-'),
+          ...this.createClass(narrowPc, 'narrow-pc-'),
+          ...this.createClass(pc, 'pc-'),
+          ...this.createClass(widePc, 'wide-pc-')
         ]
       },
       colStyle () {
