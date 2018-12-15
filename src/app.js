@@ -34,7 +34,7 @@ new Vue({
           }
         },
         enableHtml: false,
-        position: 'bottom'
+        position: 'middle'
       })
     } 
   }
