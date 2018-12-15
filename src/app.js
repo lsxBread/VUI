@@ -26,7 +26,15 @@ new Vue({
   },
   methods: {
     showToast: function() {
-      this.$toast('testing hahaha')
+      this.$toast('<a href="http://google.com">Link</a>', {
+        closeButton: {
+          text: "Close",
+          callback: () => {
+            console.log("hhahaahah")
+          }
+        },
+        enableHtml: false
+      })
     } 
   }
 })
