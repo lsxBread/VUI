@@ -33,7 +33,8 @@ new Vue({
             console.log("hhahaahah")
           }
         },
-        enableHtml: false
+        enableHtml: false,
+        position: 'middle'
       })
     } 
   }
