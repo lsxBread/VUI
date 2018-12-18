@@ -28,7 +28,33 @@
 </head>
 <body>
 <div id="app">
-  <button @click='showToast'>Show Toast</button>
+  <g-tabs :selected.sync="selectedTab">
+    <g-tabs-head>
+      <template slot="actions">
+        <button>Settings</button>
+      </template>
+      <g-tabs-item name="girl">
+        <g-icon name="settings" />Girl
+      </g-tabs-item>
+      <g-tabs-item name="finance">
+        Financial
+      </g-tabs-item>
+      <g-tabs-item name="news">
+        news
+      </g-tabs-item>
+    </g-tabs-head>
+    <g-tabs-body>
+      <g-tabs-panel name="girl">
+        Girl Related
+      </g-tabs-panel>
+      <g-tabs-panel name="finance">
+        Finance Related
+      </g-tabs-panel>
+      <g-tabs-panel name="news">
+        News Related
+      </g-tabs-panel>
+    </g-tabs-body>
+  </g-tabs>
 </div>
 <script src="src/app.js"></script>
 </body>

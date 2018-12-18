@@ -1,5 +1,5 @@
 <template>
-<div class="wrapper":class="toastClasses">
+<div class="wrapper" :class="toastClasses">
   <div class='toast' ref='toast'> 
     <slot v-if='!enableHtml'></slot>
     <div v-else v-html='$slots.default[0]'></div>
@@ -16,12 +16,11 @@
     name: 'g-toast',
     props: {
       autoClose: {
-        type: Boolean,
-        default: true
-      },
-      autoCloseDelay: {
-        type: Number,
-        default: 50
+        type: [Boolean, Number],
+        default: 10,
+        validator(value) {
+          return (value === false || typeof value === 'number') 
+        }
       },
       closeButton: {
         type: Object,
@@ -60,7 +59,7 @@
         if (this.autoClose) {
           setTimeout(() => {
             this.close()
-          }, this.autoCloseDelay * 1000)
+          }, this.autoClose * 1000)
         }
       },
       updateStyles () {
