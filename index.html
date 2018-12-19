@@ -28,13 +28,13 @@
 </head>
 <body>
 <div id="app">
-  <g-tabs :selected.sync="selectedTab">
-    <g-tabs-head>
+  <g-tabs :selected.sync="selectedTabs">
+    <g-tabs-head class="leo">
       <template slot="actions">
         <button>Settings</button>
       </template>
       <g-tabs-item name="girl">
-        <g-icon name="settings" />Girl
+        <g-icon name="settings"></g-icon>Girl
       </g-tabs-item>
       <g-tabs-item name="finance">
         Financial

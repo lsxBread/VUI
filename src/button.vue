@@ -54,7 +54,7 @@
     background: var(--button-bg);
     &:hover {
       border-color: var(--border-color-hover);
-    }
+}
     &:active {
       background-color: var(--button-active-bg);
     }
